@@ -13,7 +13,7 @@
 </div>
 
 <%= form_with model: @message, class:"ml-5", remote: true do |f| %>
- <%= f.text_field :message %>
+ <%= f.text_field :message, class:"message_message" %>
  <%= f.hidden_field :room_id %>
  <%= f.submit 'コメント' %>
 <% end %>

@@ -15,7 +15,14 @@ class BooksController < ApplicationController
   end
 
   def show
-    @booki = Book.find(params[:id])
+    
+    @see = See.find_by(ip: request.remote_ip)
+    if @see
+      @booki = Book.find(params[:id])
+    else
+      @booki = Book.find(params[:id])
+      See.create(ip: request.remote_ip)
+    end
     @book = Book.new
     @user = @booki.user
     @comment = Comment.new
