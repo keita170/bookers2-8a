@@ -13731,3 +13731,68 @@ Processing by BooksController#show as HTML
 Completed 200 OK in 124ms (Views: 91.5ms | ActiveRecord: 7.2ms)
 
 
+Started GET "/" for 115.37.208.96 at 2021-08-17 07:13:29 +0000
+Cannot render console from 115.37.208.96! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.5ms)
+Started GET "/" for 115.37.208.96 at 2021-08-17 07:13:29 +0000
+Cannot render console from 115.37.208.96! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 854ms (Views: 845.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 243ms (Views: 241.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 115.37.208.96 at 2021-08-17 07:13:35 +0000
+Cannot render console from 115.37.208.96! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 120ms (Views: 109.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 115.37.208.96 at 2021-08-17 07:13:45 +0000
+Cannot render console from 115.37.208.96! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fw+aoRnjkpFhRlTUgTeipu+PkNonQFoyBkR8idBo9OcJhQAzxRhuHetE42xQH39lP3Tjr4RoYSyQWUPRXODazw==", "user"=>{"name"=>"qqq", "email"=>"qqq@qqq", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqq@qqq"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "qqq"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "qqq@qqq"], ["encrypted_password", "$2a$12$pjB801GYLFmbMrVmD5deKutLYyAhHMOtZto7M2rD.wgVzhpYlNPoS"], ["name", "qqq"], ["created_at", "2021-08-17 07:13:46.305823"], ["updated_at", "2021-08-17 07:13:46.305823"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Redirected to https://bf84e94c9edf4736a060c8b4ff814967.vfs.cloud9.us-east-1.amazonaws.com/users/5
+Completed 302 Found in 343ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/users/5" for 115.37.208.96 at 2021-08-17 07:13:46 +0000
+Cannot render console from 115.37.208.96! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 5]]
+  ↳ app/views/users/show.html.erb:18
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 5]]
+  ↳ app/views/users/show.html.erb:22
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ? ORDER BY "books"."created_at" ASC[0m  [["user_id", 5]]
+  ↳ app/views/users/show.html.erb:66
+  Rendered users/show.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 147ms (Views: 114.8ms | ActiveRecord: 1.3ms)
+
+
