@@ -1,24 +1,13 @@
-# 試し書き
+# bookers7-9の応用課題a,b,dが入ってます
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* ここはbookers2の7a-9aの処理が入ってます
 
-Things you may want to cover:
+* 7aは1週間のいいね多い順に表示させる事
 
-* Ruby version
+* 8aは相互フォローしてる人限定で、DM機能が使えるようにしている事
 
-* System dependencies
+* 9aは閲覧数を表示して、一覧と詳細ページに表示させるようにしている事
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* bookers2-6までで、フォローフォロワー機能、検索機能、非同期でのいいね、コメント機能を実装してます
 
 * ...
